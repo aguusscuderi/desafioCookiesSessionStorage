@@ -15,18 +15,18 @@
 </head>
 <body>
     <div class="container h-100">
-       <h1>desafio cookies session storage</h1>
-       <div>
-         <form method="POST" action="http://localhost:3000/login">
-            <b>USERNAME: </b>
-            <label for="user"></label>
-            <input type="text" name="user" id="user_input" placeholder="Username:">
-            <b>PASSWORD: </b>
-            <label for="pswd"></label>
-            <input type="password" name="pswd" id="pswd_input" placeholder="Password:">
-            <button type="submit">LOGIN</button>
-         </form>
-       </div>
+        <a id="logout_a" href="http://localhost:3000/logout">Logout</a>
     </div>
+    <h1 id="welcome_msg"> WELCOME <%=userData.user.user%></h1>
+    <h2 style="display: none;" id="bye_msg"> ¡Hasta luego, <%=userData.user.user%>!</h2>
 </body>
+<script>
+    const logout = document.getElementById('logout_a')
+    const welcome = document.getElementById('welcome_msg')
+    const bye = document.getElementById('bye_msg')
+    logout.addEventListener('click', ()=>{
+        welcome.style.display = 'none'
+        bye.style.display = 'block'
+    })
+</script>
 </html>

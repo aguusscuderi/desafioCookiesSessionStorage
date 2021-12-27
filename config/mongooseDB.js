@@ -1,6 +1,6 @@
 let {Schema, model} = require('mongoose')
-let {msgCreateSchema} = require('../components/messages-schema/msgSchema')
-const msgSchema = new Schema(msgCreateSchema)
-const msgModel = model('messages', msgSchema)
+let {userCreateSchema} = require('../components/userSchema/userSchema')
+const userSchema = new Schema(userCreateSchema)
+const userModel = model('user', userSchema)
 
-module.exports = msgModel
+module.exports = userModel
