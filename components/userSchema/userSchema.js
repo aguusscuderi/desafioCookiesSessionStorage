@@ -1,11 +1,13 @@
 let Joi = require('joi')
 
-const username = Joi.string().required()
+const email = Joi.string().required()
+const user = Joi.string().required()
 const pswd = Joi.string().required()
 
 
 const userCreateSchema = {
-    username,
+    email,
+    user,
     pswd
 }
 
